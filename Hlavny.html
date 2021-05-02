@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hlav.css">
+    <script type="text/javascript" src="/Lib/jquery.2.1.1.min.js"></script>
+    <script src="Lib/pictures.js"></script>
+    <script src="Lib/sounds.js"></script>
+    <script src="Lib/main.js"></script>
+    <script src="Lib/mainChar.js"></script>
+    <title>Moja Hra</title>
+    <style>
+        /* body {
+          margin-left: 0;
+          margin-right: 0;
+        } */
+        #canvas {
+          border: 3px solid black;
+          display: block;
+          margin-top: 10px;
+          width: 1250px;
+          height: 640px;
+          /* position: absolute; */
+          margin-left: auto;
+          margin-right: auto;
+        }
+        h1{
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+      </style>
+</head>
+<body>
+    <div id="main">
+      <ul id="ul_1">
+        <li><a href="javascript:void(0)" class="button play">Start Game</a></li>
+        <li><a href="javascript:void(0)" class="button settings">Settings</a></li>
+        <li><a href="javascript:void(0)" class="button controls">Controls</a></li>
+      </ul>
+   </div>
+   <div id="play"> 
+      <div class="play_again menu">
+        <button>Play Again?</button>
+      </div>
+      <a href="javascript:void(0)" class="button gameOver">Game Over?</a>
+   </div>
+
+   <div id="settings">
+    <div class="holder_1">
+        <div class="blinking-glow_1"></div>
+        <div class="glow_1"></div>
+        <div class="flame_1"></div>
+    </div>
+    <div class="holder">
+      <div class="blinking-glow"></div>
+      <div class="glow"></div>
+      <div class="flame"></div>
+    </div>
+    <div id="pedik_1"><p>Sounds - </p><p id = "s_on">ON</p><p>|</p><p id = "s_off">OFF</p></div>
+    <div id="pedik_2"><p>Music - </p><p id = "m_on">ON</p><p>|</p><p id = "m_off">OFF</p></div>
+    <a href="javascript:void(0)" class="button back">Back</a>
+   </div>
+   
+   <div id="controls">
+    <div class="holder_1">
+      <div class="blinking-glow_1"></div>
+      <div class="glow_1"></div>
+      <div class="flame_1"></div>
+    </div>
+    <div class="holder">
+      <div class="blinking-glow"></div>
+      <div class="glow"></div>
+      <div class="flame"></div>
+    </div>
+    <a href="javascript:void(0)" class="button back">Back</a>
+   </div>
+    <canvas id="canvas" >Nepodporujeme canvas</canvas>    
+</body>
+</html>
