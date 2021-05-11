@@ -10,15 +10,6 @@ $(function() {
   var sound_on = false;
   var move = 560;
 
-//   // Handle keyboard events
-// window.onkeydown = function(event) {
-//   keys[event.keyCode] = true;
-//   console.log(keys);
-// };
-// window.onkeyup = function(event) {
-//   keys[event.keyCode] = false;
-// };
-
   var canvas = document.getElementById("canvas");  
   var ctx = canvas.getContext("2d");
 
@@ -65,28 +56,8 @@ Images.mainMenu.onload = function() {
   $(".play_again").hide();
   $('#main').hide();
   $('#play').show();
-  document.addEventListener('keydown', function(e){
-    if(e.keyCode == 39) {
-      move+=50;
-    console.log(move);
-    ondrawCharRight(Images.charWalkRight, move);
-    
-  }
-  if(e.keyCode == 37){
-    move-=50;
-    console.log(move);
-    ondrawCharLeft(Images.charWalkLeft, move);
-  }
-  });
-  document.addEventListener('keyup', function(e){
-    if(e.keyCode == 39) {
-      //stope();
-    
-  }
-  if(e.keyCode == 37){
-    //stope();
-  }
-  });
+  
+  req = new Animation(); 
   
   }), false);
   // Image, x, y, width, height
@@ -249,6 +220,9 @@ Images.mainMenu.onload = function() {
   if($('.gameOver').click(function() {
     if(snd_tmp)
       mySound.play();
+      cancelAnimationFrame(req);
+      cancelAnimationFrame(req);
+      ctx.drawImage(Images.gameOver, 0, 0, 1250, 550);
       var alertButton = new Button("You lost.", 580, 68, 'Yellow', 546, 40, 155, 40, 'brown', 'round');
       $(".play_again").fadeIn(800);
   }), false);
